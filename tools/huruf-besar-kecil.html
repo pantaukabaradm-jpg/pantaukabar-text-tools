@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Ubah Huruf Besar Kecil Online | PantauKabar</title>
+  <meta name="description" content="Ubah teks menjadi huruf besar, kecil, atau kapital secara online dan gratis.">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://pantaukabar.com/tools/huruf-besar-kecil.html">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">PantauKabar</div>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/about.html">Tentang</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <article class="card">
+    <h1>Ubah Huruf Besar / Kecil</h1>
+    <p>Masukkan teks lalu pilih format huruf yang diinginkan.</p>
+
+    <textarea id="text"
+      style="width:100%;min-height:200px;padding:14px;border-radius:10px;border:1px solid #e5e7eb;"></textarea>
+
+    <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">
+      <button onclick="toUpper()">UPPERCASE</button>
+      <button onclick="toLower()">lowercase</button>
+      <button onclick="toCapitalize()">Kapital Awal</button>
+    </div>
+  </article>
+</main>
+
+<footer class="footer">© 2026 PantauKabar</footer>
+
+<script>
+  const text = document.getElementById('text');
+
+  function toUpper() {
+    text.value = text.value.toUpperCase();
+  }
+  function toLower() {
+    text.value = text.value.toLowerCase();
+  }
+  function toCapitalize() {
+    text.value = text.value.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+  }
+</script>
+
+</body>
+</html>
