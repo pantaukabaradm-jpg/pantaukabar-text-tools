@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Hitung Jumlah Paragraf Online | PantauKabar</title>
+  <meta name="description" content="Hitung jumlah paragraf dalam teks secara online dan gratis.">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://pantaukabar.com/tools/hitung-paragraf.html">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">PantauKabar</div>
+    <nav class="nav"><a href="/">Home</a></nav>
+  </div>
+</header>
+
+<main class="container">
+  <article class="card">
+    <h1>Hitung Jumlah Paragraf</h1>
+    <p>Masukkan teks untuk mengetahui jumlah paragraf secara otomatis.</p>
+
+    <textarea id="text"
+      style="width:100%;min-height:200px;padding:14px;border-radius:10px;border:1px solid #e5e7eb;"></textarea>
+
+    <p style="margin-top:20px">
+      Jumlah paragraf:
+      <strong id="count">0</strong>
+    </p>
+  </article>
+</main>
+
+<footer class="footer">© 2026 PantauKabar</footer>
+
+<script>
+  const text = document.getElementById('text');
+  const count = document.getElementById('count');
+
+  text.addEventListener('input', () => {
+    const paragraphs = text.value
+      .split(/\n+/)
+      .filter(p => p.trim() !== '');
+    count.textContent = paragraphs.length;
+  });
+</script>
+
+</body>
+</html>
