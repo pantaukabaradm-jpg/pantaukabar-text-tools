@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Text Tools Online Bahasa Indonesia | Cepat, Gratis & Profesional</title>
 
-  <!-- PRIMARY SEO -->
+  <!-- SEO PRIMARY -->
   <meta name="description" content="Text tools online profesional Bahasa Indonesia untuk menghitung jumlah kata, karakter, paragraf, dan mengolah teks secara cepat, akurat, dan gratis.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://pantaukabar.com/">
@@ -13,15 +13,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- OPEN GRAPH -->
-  <meta property="og:title" content="Text Tools Online Profesional Bahasa Indonesia">
-  <meta property="og:description" content="Kumpulan text tools online gratis untuk penulis, pelajar, dan content creator Indonesia.">
+  <meta property="og:title" content="Text Tools Online Bahasa Indonesia">
+  <meta property="og:description" content="Kumpulan text tools online gratis untuk pelajar, penulis, dan content creator Indonesia.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pantaukabar.com/">
 
-  <!-- GOOGLE FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="/css/style.css">
 
   <!-- SCHEMA -->
   <script type="application/ld+json">
@@ -33,175 +31,83 @@
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "All",
     "inLanguage": "id-ID",
-    "description": "Text tools online profesional Bahasa Indonesia untuk menghitung dan mengolah teks."
+    "description": "Text tools online profesional Bahasa Indonesia untuk mengolah teks secara cepat dan gratis."
   }
   </script>
 
   <style>
-    :root {
-      --primary: #2563eb;
-      --dark: #0f172a;
-      --gray: #64748b;
-      --bg: #f8fafc;
-      --border: #e5e7eb;
+    /* HERO SPECIFIC (inline, no extra request) */
+    .hero {
+      background: radial-gradient(1200px 600px at 10% -10%, #60a5fa 0%, transparent 60%),
+                  radial-gradient(1200px 600px at 90% 10%, #a78bfa 0%, transparent 60%),
+                  linear-gradient(180deg, #0f172a, #020617);
+      color: #ffffff;
+      padding: 90px 20px;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--dark);
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* HEADER */
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .container {
+    .hero-inner {
       max-width: 1100px;
       margin: auto;
-      padding: 20px;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--primary);
-    }
-
-    .nav a {
-      margin-left: 20px;
-      font-weight: 500;
-      color: var(--gray);
-    }
-
-    /* HERO */
-    .hero {
-      padding: 70px 20px;
       text-align: center;
-      background: linear-gradient(180deg, #ffffff, #f1f5f9);
     }
-
     .hero h1 {
-      font-size: 42px;
-      font-weight: 800;
-      margin-bottom: 15px;
+      font-size: 44px;
+      margin-bottom: 16px;
       letter-spacing: -1px;
     }
-
     .hero p {
       font-size: 18px;
-      color: var(--gray);
-      max-width: 700px;
+      color: #cbd5f5;
+      max-width: 720px;
       margin: auto;
     }
-
-    /* TOOLS GRID */
-    .tools {
-      padding: 60px 20px;
+    .badge {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 6px 14px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 999px;
+      font-size: 13px;
+      color: #e0e7ff;
     }
 
     .tools-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
+      margin-top: 30px;
     }
-
     .tool-card {
       background: #ffffff;
       border: 1px solid var(--border);
-      border-radius: 14px;
+      border-radius: var(--radius);
       padding: 24px;
-      transition: all 0.2s ease;
+      transition: all .2s ease;
     }
-
     .tool-card:hover {
       transform: translateY(-4px);
       border-color: var(--primary);
     }
-
     .tool-card h3 {
-      margin: 0 0 10px;
-      font-size: 18px;
+      margin: 0 0 8px;
     }
-
     .tool-card p {
-      color: var(--gray);
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    /* FEATURES */
-    .features {
-      background: #ffffff;
-      padding: 60px 20px;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .features ul {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      list-style: none;
-      padding: 0;
       margin: 0;
-    }
-
-    .features li {
-      padding: 16px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: var(--bg);
       font-size: 14px;
     }
-
-    /* FOOTER */
-    footer {
-      padding: 40px 20px;
-      text-align: center;
-      color: var(--gray);
-      font-size: 14px;
-    }
-
-    footer a {
-      margin: 0 10px;
-      color: var(--gray);
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 32px;
-      }
+    .soon {
+      opacity: 0.6;
+      cursor: default;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="container nav">
+<header class="header">
+  <div class="header-inner">
     <div class="brand">PantauKabar</div>
-    <nav>
+    <nav class="nav">
       <a href="/">Home</a>
-      <a href="/tools/hitung-jumlah-kata.html">Tools</a>
       <a href="/about.html">Tentang</a>
       <a href="/contact.html">Kontak</a>
     </nav>
@@ -209,60 +115,69 @@
 </header>
 
 <section class="hero">
-  <h1>Text Tools Online Profesional</h1>
-  <p>
-    Kumpulan text tools online Bahasa Indonesia untuk menghitung jumlah kata,
-    karakter, paragraf, dan mengolah teks secara cepat, akurat, dan gratis.
-  </p>
-</section>
-
-<section class="tools container">
-  <div class="tools-grid">
-    <a href="/tools/hitung-jumlah-kata.html" class="tool-card">
-      <h3>Hitung Jumlah Kata</h3>
-      <p>Menghitung kata, karakter, dan paragraf secara instan untuk artikel, tugas, dan skripsi.</p>
-    </a>
-
-    <a href="/tools/hitung-karakter.html" class="tool-card">
-      <h3>Hitung Karakter</h3>
-      <p>Mengetahui jumlah karakter teks dengan atau tanpa spasi secara akurat.</p>
-    </a>
-
-    <a href="/tools/huruf-besar-kecil.html" class="tool-card">
-      <h3>Ubah Huruf Besar / Kecil</h3>
-      <p>Mengubah teks menjadi uppercase, lowercase, atau kapital otomatis.</p>
-    </a>
-
-    <a href="/tools/hapus-spasi-berlebih.html" class="tool-card">
-      <h3>Hapus Spasi Berlebih</h3>
-      <p>Membersihkan spasi ganda dan baris kosong agar teks lebih rapi.</p>
-    </a>
-
-    <a href="/tools/hitung-paragraf.html" class="tool-card">
-      <h3>Hitung Paragraf</h3>
-      <p>Menghitung jumlah paragraf dalam teks secara otomatis.</p>
-    </a>
+  <div class="hero-inner">
+    <span class="badge">Text Tools Online • Bahasa Indonesia</span>
+    <h1>Alat Pengolah Teks Cepat & Profesional</h1>
+    <p>
+      Gunakan berbagai text tools online gratis untuk menghitung,
+      menganalisis, dan mengelola teks secara instan.
+      Dibuat khusus untuk kebutuhan pelajar, penulis, dan content creator Indonesia.
+    </p>
   </div>
 </section>
 
-<section class="features">
-  <div class="container">
+<main class="container">
+
+  <section>
+    <h2>Text Tools Tersedia</h2>
+
+    <div class="tools-grid">
+      <!-- AKTIF -->
+      <a href="/tools/hitung-jumlah-kata.html" class="tool-card">
+        <h3>Hitung Jumlah Kata</h3>
+        <p>Menghitung kata, karakter, dan paragraf secara instan.</p>
+      </a>
+
+      <!-- COMING SOON -->
+      <div class="tool-card soon">
+        <h3>Hitung Karakter</h3>
+        <p>Mengetahui jumlah karakter teks secara akurat. (Segera hadir)</p>
+      </div>
+
+      <div class="tool-card soon">
+        <h3>Ubah Huruf Besar / Kecil</h3>
+        <p>Mengubah teks menjadi uppercase, lowercase, atau kapital. (Segera hadir)</p>
+      </div>
+
+      <div class="tool-card soon">
+        <h3>Hapus Spasi Berlebih</h3>
+        <p>Membersihkan spasi ganda dan baris kosong. (Segera hadir)</p>
+      </div>
+
+      <div class="tool-card soon">
+        <h3>Hitung Jumlah Paragraf</h3>
+        <p>Menghitung paragraf dari teks secara otomatis. (Segera hadir)</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top:60px">
+    <h2>Mengapa PantauKabar?</h2>
     <ul>
-      <li>⚡ Cepat & ringan tanpa instalasi</li>
-      <li>🔒 Aman dan tanpa registrasi</li>
-      <li>📱 Optimal untuk mobile & desktop</li>
-      <li>🇮🇩 Fokus Bahasa Indonesia</li>
-      <li>🎯 Cocok untuk penulis & pelajar</li>
-      <li>🧠 Dibangun untuk produktivitas</li>
+      <li>Gratis dan tanpa registrasi</li>
+      <li>Ringan dan cepat di semua perangkat</li>
+      <li>Tidak menyimpan data pengguna</li>
+      <li>Dirancang khusus untuk Bahasa Indonesia</li>
     </ul>
-  </div>
-</section>
+  </section>
 
-<footer>
-  © 2026 PantauKabar  
-  <br>
+</main>
+
+<footer class="footer">
+  © 2026 PantauKabar |
   <a href="/about.html">Tentang</a> |
-  <a href="/privacy-policy.html">Kebijakan Privasi</a> |
+  <a href="/privacy-policy.html">Privasi</a> |
+  <a href="/terms.html">Terms</a> |
   <a href="/disclaimer.html">Disclaimer</a> |
   <a href="/contact.html">Kontak</a>
 </footer>
