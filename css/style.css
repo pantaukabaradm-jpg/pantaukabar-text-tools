@@ -1,0 +1,127 @@
+/* =========================
+   PantauKabar Global Styles
+   Lightweight • SEO Safe
+========================= */
+
+:root {
+  --primary: #2563eb;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --border: #e5e7eb;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.65;
+}
+
+/* ===== Layout ===== */
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+}
+
+/* ===== Typography ===== */
+
+h1 {
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 28px;
+}
+
+p {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+ul {
+  padding-left: 18px;
+  color: var(--text-muted);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Header ===== */
+
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.nav a {
+  margin-left: 20px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* ===== Footer ===== */
+
+.footer {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  padding: 40px 20px;
+}
+
+.footer a {
+  margin: 0 8px;
+  color: var(--text-muted);
+}
+
+/* ===== Mobile ===== */
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 26px;
+  }
+  .container {
+    padding: 24px 16px;
+  }
+}
