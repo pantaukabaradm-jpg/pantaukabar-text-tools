@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Hapus Spasi Berlebih Online | PantauKabar</title>
+  <meta name="description" content="Hapus spasi ganda dan baris kosong dari teks secara online dengan cepat.">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://pantaukabar.com/tools/hapus-spasi-berlebih.html">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">PantauKabar</div>
+    <nav class="nav"><a href="/">Home</a></nav>
+  </div>
+</header>
+
+<main class="container">
+  <article class="card">
+    <h1>Hapus Spasi Berlebih</h1>
+    <p>Membersihkan spasi ganda dan baris kosong dari teks.</p>
+
+    <textarea id="input"
+      style="width:100%;min-height:200px;padding:14px;border-radius:10px;border:1px solid #e5e7eb;"></textarea>
+
+    <button onclick="clean()" style="margin-top:16px">Bersihkan Teks</button>
+  </article>
+</main>
+
+<footer class="footer">© 2026 PantauKabar</footer>
+
+<script>
+  function clean() {
+    const el = document.getElementById('input');
+    el.value = el.value
+      .replace(/\s+/g, ' ')
+      .replace(/\n\s*\n/g, '\n')
+      .trim();
+  }
+</script>
+
+</body>
+</html>
